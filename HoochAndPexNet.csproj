@@ -55,7 +55,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Manager\FileResourceManager.cs" />
     <Compile Include="Resources\Manager\IResourceManager.cs" />
+    <Compile Include="Resources\Resources\ConfigResource.cs" />
+    <Compile Include="Resources\Resources\ImageResource.cs" />
     <Compile Include="Resources\Resources\IResource.cs" />
+    <Compile Include="Resources\Resources\MusicResource.cs" />
+    <Compile Include="Resources\Resources\SoundResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

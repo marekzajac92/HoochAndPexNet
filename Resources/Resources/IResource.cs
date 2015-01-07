@@ -2,5 +2,6 @@
 {
     public interface IResource
     {
+        void Load(string url);
     }
 }
