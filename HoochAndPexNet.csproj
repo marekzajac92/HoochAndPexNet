@@ -53,6 +53,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Manager\FileResourceManager.cs" />
+    <Compile Include="Resources\Manager\IResourceManager.cs" />
+    <Compile Include="Resources\Resources\IResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
