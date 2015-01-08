@@ -60,6 +60,9 @@
     <Compile Include="Resources\Resources\IResource.cs" />
     <Compile Include="Resources\Resources\MusicResource.cs" />
     <Compile Include="Resources\Resources\SoundResource.cs" />
+    <Compile Include="States\Interface\IState.cs" />
+    <Compile Include="States\Manager\IStateManager.cs" />
+    <Compile Include="States\StateResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
