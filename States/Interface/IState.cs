@@ -1,4 +1,6 @@
-﻿using HoochAndPexNet.Resources.Manager;
+﻿using HoochAndPexNet.Core.Graphic.Interface;
+using HoochAndPexNet.Resources.Manager;
+using System.Collections.Generic;
 
 namespace HoochAndPexNet.States.Interface
 {
@@ -8,5 +10,6 @@ namespace HoochAndPexNet.States.Interface
         StateResult Update(double deltaTime);
         void Stop();
         void Pause();
+        IEnumerable<IDrawableObject> GetObjectsToDraw();
     }
 }
