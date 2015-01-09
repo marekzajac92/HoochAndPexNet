@@ -1,4 +1,5 @@
-﻿using SFML.Window;
+﻿using HoochAndPexNet.Core;
+using SFML.Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,13 @@ namespace HoochAndPexNet
     {
         static void Main(string[] args)
         {
+            var core = new ApplicationCore();
+            core.Initialize();
+            
+            while(core.Update())
+            {
+                core.Draw();
+            }
         }
     }
 }

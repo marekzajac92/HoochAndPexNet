@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ApplicationCore.cs" />
     <Compile Include="Core\Graphic\Interface\IDrawableObject.cs" />
     <Compile Include="Maps\Map.cs" />
     <Compile Include="Program.cs" />
