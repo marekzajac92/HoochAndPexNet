@@ -76,8 +76,6 @@ namespace HoochAndPexNet.Resources.Manager
             _knownResourceTypes.Add("wav", typeof(SoundResource));
             _knownResourceTypes.Add("png", typeof(ImageResource));
             _knownResourceTypes.Add("xml", typeof(ConfigResource));
-
-            throw new NotImplementedException();
             //TODO: Dodac wszystkie potrzebne rodzaje plikow
         }
 

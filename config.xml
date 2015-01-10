@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <screen>
+    <screenWidth value="840"/>
+    <screenHeight value="480"/>
+  </screen>
+</config>

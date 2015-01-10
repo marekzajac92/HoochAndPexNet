@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
 using HoochAndPexNet.States;
+using HoochAndPexNet.Resources.Manager;
+using HoochAndPexNet.Core.Config;
 
 namespace HoochAndPexNet.Core
 {
@@ -16,6 +18,8 @@ namespace HoochAndPexNet.Core
         private RenderWindow _window;
 
         private IStateManager _stateManager;
+        private IResourceManager _resourceManager;
+        private IConfigManager _configManager;
 
         private Stopwatch _clock;
 
@@ -25,10 +29,15 @@ namespace HoochAndPexNet.Core
 
         public void Initialize()
         {
-            _window = new RenderWindow(new VideoMode(800, 600, 32), "Title", Styles.Default);
-            _window.Closed += _window_Close;
-
             _stateManager = new StateManager(new IntroState());
+            _resourceManager = new FileResourceManager();
+            _configManager = new ConfigManager(_resourceManager);
+            _configManager.Load("config.xml");
+
+            var screenWidth = (uint)_configManager.GetConfig().ScreenWidth;
+            var screenHeight = (uint)_configManager.GetConfig().ScreenHeight;
+            _window = new RenderWindow(new VideoMode(screenWidth, screenHeight, 32), "Title", Styles.Default);
+            _window.Closed += _window_Close;
 
             _clock = new Stopwatch();
             _clock.Start();
